@@ -3,5 +3,7 @@ from django.db import models
 
 class Project(models.Model):
 
-    def __init__():
-        #  some code
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='portfolio/images/')
+    url = models.URLField(blank=True)
